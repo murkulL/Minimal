@@ -80,7 +80,175 @@
         left: 50%;
         top: 100%;
         transform: translate(-50%, -50%,);
-      }
+      } 
+}
+.minimalist{
+    height: 289px;
+    margin-bottom: 79px;
+    background-color: #FEFEC9;
+    &__text{
+        padding-top: 60px;
+        max-width: 940px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    &__link{
+        display: block;
+        margin: 0 auto;
+        padding: 13px 34px 20px;
+        border: 1px solid #47474F;
+        max-width: 159px;
+        margin-bottom: 61px;
+        color: #47474F;
+        border-bottom: 2px solid #47474F;
+    }
+}
+.brands{
+    height: 625px;
+    &__items{
+        gap: 20px;
+    }
+    &__title{
+        padding-top: 38px;
+    }
+    &__text{
+        padding-top: 20px;
+        text-align: center;
+    }
+    &__img{
+        max-width: 300px;
+    }
 
-    
+}
+.recent{
+    background-color: #F5F5F5;
+    &__inner{
+        padding-bottom: 89px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        gap: 20px;
+    }
+    &__main-title{
+        padding-top: 79px;
+        padding-bottom: 43px;
+    }
+    &__title{
+        padding-top: 19px;
+    }
+    &__text{
+        text-align: center;
+        padding: 4px;
+        padding-bottom: 21px;
+    }
+    &__card{
+        background: #FFFFFF;
+    }
+}
+.ourteam{
+    padding-bottom: 89px;
+    &__main-title{
+        padding-top: 79px;
+        padding-bottom: 43px;
+    }
+    &__items{
+        display: flex;
+        gap: 20px;
+    }
+    &__block-links{
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        padding-top: 20px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+    }
+    &__text{
+        padding-bottom: 18px;
+        font-family: 'Vollkorn';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+.reviews{
+    background: #F5F5F5;
+    padding-bottom: 98px;
+    position: relative;
+    &__image{
+        padding-top: 79px;
+        margin: 0 auto;
+        padding-bottom: 47px; 
+    }
+    &__items{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__text{
+        text-align: center;
+        font-family: 'Vollkorn';
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 33px;
+        max-width: 339px;
+        padding-bottom: 24px;
+    }
+    &__item-img{
+        margin: 0 auto;
+        padding: 6px;
+    }
+    &__image-container {
+        position: relative; 
+        display: block; 
+      }
+      
+    &__image-container img {
+        display: block; 
+      }
+      
+    &__image-container &__border {
+        position: absolute; 
+        bottom:160; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        width: 2px; 
+        height: 215px; 
+        background-color: #00000017; 
+      }
+    &__text-name{
+        text-align: center;
+        color: #ABABAB;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+}
+.info{
+    background-image: url(/images/green-bg.jpg);
+    max-width: 100%;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    &__title{
+        padding: 79px 0 72px 0;
+    }
+    &__list{
+        display: flex;
+    }
 }
