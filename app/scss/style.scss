@@ -89,6 +89,9 @@
     height: 289px;
     margin-bottom: 79px;
     background-color: #FEFEC9;
+    &__hidden-title{
+        display: none;
+    }
     &__text{
         padding-top: 60px;
         max-width: 940px;
@@ -193,6 +196,9 @@
     background: #F5F5F5;
     padding-bottom: 98px;
     position: relative;
+    &__hidden-title{
+        display: none;
+    }
     &__image{
         padding-top: 79px;
         margin: 0 auto;
