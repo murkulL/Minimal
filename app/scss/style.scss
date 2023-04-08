@@ -245,10 +245,101 @@
     max-width: 100%;
     background-repeat: no-repeat ;
     background-size: cover;
+    padding-bottom: 61px;
     &__title{
         padding: 79px 0 72px 0;
     }
+    &__min-title{
+        padding-bottom: 21px;
+    }
     &__list{
         display: flex;
+        gap: 196px;
+        align-self: center;
     }
+    &__list-items{
+        text-align: center;
+    }
+    &__image{
+        margin: 0 auto;
+        
+    }
+    &__social-items{
+        justify-items: start;
+        margin-left: 45px;
+        padding-bottom: 11px;
+    }
+    &__social-items{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: relative;
+    }
+    &__image-facebook,
+    &__image-twitter,
+    &__image-linkdin{
+        position: absolute;
+        top: 2px;
+        right: 109px;
+    }
+    &__block-text{
+        padding-top: 21px;
+    }
+    &__item-meet{
+        max-width: 178px;
+    }
+#local-img{
+    padding-bottom: 21px;
 }
+#email-img{
+    padding-bottom: 34px;
+}
+#heart-img{
+    padding-bottom: 28px;
+}
+}
+.footer{
+    background-color: black;
+    &__form{
+        width:564px;
+        height:298px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+        padding-top: 69px;   
+    }
+    &__input-text,
+    &__input-number{
+        background: rgba(255, 255, 255, 0.18);
+        border: none;
+    }
+    &__input-email{
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    &__textarea{
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    &__button{
+        display: block;
+        margin: 0 auto;
+        background: black;
+        border: 1px solid #7EC4BD;
+        color: #7EC4BD;
+        padding: 15px 60px;
+        margin-top: 22px;
+        margin-bottom: 37px;
+    }
+    &__logo-img{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+    &__copy{
+        text-align: center;
+        padding-bottom: 75px;
+    }
+
+}
+
+
