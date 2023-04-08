@@ -39,6 +39,7 @@
         color: #404040;
     }
 }
+
 .making{
     background-image: url(../images/upper-bg.jpg);
     max-width: 100%;
@@ -352,6 +353,7 @@
         margin-top: 92px;
         margin-bottom: 37px;
         border-bottom: 2px solid #7EC4BD;
+        cursor: pointer;
     }
     &__logo-img{
         display: block;
