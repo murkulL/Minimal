@@ -14,6 +14,7 @@
     }
     &__box-logo{
         display: flex;
+        align-items: center;
     }
     &__title{
         font-weight: 400;
@@ -309,16 +310,36 @@
     }
     &__input-text,
     &__input-number{
+        font-family: 'Vollkorn';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
+        padding: 18px 0 17px 31px;
         background: rgba(255, 255, 255, 0.18);
         border: none;
     }
     &__input-email{
+        padding: 18px 0 17px 31px;
+        font-family: 'Vollkorn';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
         border: none;
         background: rgba(255, 255, 255, 0.2);
     }
     &__textarea{
+        padding: 18px 0 17px 31px;
+        font-family: 'Vollkorn';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
         border: none;
         background: rgba(255, 255, 255, 0.2);
+        height: 127px;
+        color: #F5F5F5;
     }
     &__button{
         display: block;
@@ -327,7 +348,7 @@
         border: 1px solid #7EC4BD;
         color: #7EC4BD;
         padding: 15px 60px;
-        margin-top: 22px;
+        margin-top: 92px;
         margin-bottom: 37px;
     }
     &__logo-img{
@@ -338,6 +359,11 @@
     &__copy{
         text-align: center;
         padding-bottom: 75px;
+        font-family: 'Vollkorn';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.4);
     }
 
 }
