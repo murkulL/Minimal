@@ -39,7 +39,6 @@
         color: #404040;
     }
 }
-
 .making{
     background-image: url(../images/upper-bg.jpg);
     max-width: 100%;
@@ -89,9 +88,6 @@
     height: 289px;
     margin-bottom: 79px;
     background-color: #FEFEC9;
-    &__hidden-title{
-        display: none;
-    }
     &__text{
         padding-top: 60px;
         max-width: 940px;
@@ -124,7 +120,6 @@
     &__img{
         max-width: 300px;
     }
-
 }
 .recent{
     background-color: #F5F5F5;
@@ -196,9 +191,6 @@
     background: #F5F5F5;
     padding-bottom: 98px;
     position: relative;
-    &__hidden-title{
-        display: none;
-    }
     &__image{
         padding-top: 79px;
         margin: 0 auto;
@@ -224,11 +216,11 @@
     &__image-container {
         position: relative; 
         display: block; 
-      }
+    }
       
     &__image-container img {
         display: block; 
-      }
+    }
       
     &__image-container &__border {
         position: absolute; 
@@ -238,7 +230,7 @@
         width: 2px; 
         height: 215px; 
         background-color: #00000017; 
-      }
+    }
     &__text-name{
         text-align: center;
         color: #ABABAB;
@@ -375,7 +367,6 @@
         line-height: 22px;
         color: rgba(255, 255, 255, 0.4);
     }
-
 }
 
 
