@@ -312,13 +312,13 @@
     </main>
     <footer class="footer">
       <form class="footer__form" action="#">
-        <input class="footer__input-text" type="text" placeholder="Name">
-        <input class="footer__input-email" type="email" placeholder="Email">
-        <input class="footer__input-number" type="number" placeholder="Budget">
-        <textarea class="footer__textarea" name="textarea" placeholder="Describe youre project..."></textarea>
+        <input class="footer__input-text" type="text" placeholder="Name" pattern="^[a-zA-Z]*" required>
+        <input class="footer__input-email" type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        <input class="footer__input-number" type="number" placeholder="Budget" required>
+        <textarea class="footer__textarea" name="textarea" placeholder="Describe youre project..." pattern="[a-z]{1,30}(,[a-z]{1,30})*" required></textarea>
       </form>
-      <button class="footer__button" type="submit">Send Message</button>
-      <img class="footer__logo-img" src="/images/footer-logo.svg" alt="footer-logo">
+      <button class="footer__button" type="submit" required>Send Message</button>
+      <img class="footer__logo-img" src="./app/images/footer-logo.svg" alt="footer-logo">
       <p class="footer__copy">Minimal Template made in Webflow. All rights reserved.</p>
     </footer>
   </div>

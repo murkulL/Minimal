@@ -279,7 +279,7 @@
                 <ul class="info__items-traditional">
                   <li class="info__item-traditional">
                     <p class="info__text-traditional">Email us</p>
-                    <a class="info__link-traditional" id="info__link" href="#">contact@minimal.com</a>
+                    <a class="info__link-traditional" id="info__link" href="https://www.instagram.com">contact@minimal.com</a>
                     <div class="info__block-text">
                       <p class="info__text-traditional">Contact form</p>
                       <p class="info__text-traditional">Scroll down</p>
@@ -312,12 +312,12 @@
     </main>
     <footer class="footer">
       <form class="footer__form" action="#">
-        <input class="footer__input-text" type="text" placeholder="Name">
-        <input class="footer__input-email" type="email" placeholder="Email">
-        <input class="footer__input-number" type="number" placeholder="Budget">
-        <textarea class="footer__textarea" name="textarea" placeholder="Describe youre project..."></textarea>
+        <input class="footer__input-text" type="text" placeholder="Name" pattern="^[a-zA-Z]*" required>
+        <input class="footer__input-email" type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        <input class="footer__input-number" type="number" placeholder="Budget" required>
+        <textarea class="footer__textarea" name="textarea" placeholder="Describe youre project..." pattern="[a-z]{1,30}(,[a-z]{1,30})*" required></textarea>
       </form>
-      <button class="footer__button" type="submit">Send Message</button>
+      <button class="footer__button" type="submit" required>Send Message</button>
       <img class="footer__logo-img" src="./app/images/footer-logo.svg" alt="footer-logo">
       <p class="footer__copy">Minimal Template made in Webflow. All rights reserved.</p>
     </footer>
