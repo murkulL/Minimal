@@ -367,7 +367,16 @@ button{
         height: 127px;
         color: #ffffff;
     }
+    &__input-text,
+    &__input-email,
+    &__textarea,
+    &__input-number::placeholder {
+        color: #fff; 
+    }
     &__button{
+        font-family: 'Vollkorn';
+        font-style: italic;
+        font-weight: 400;
         display: block;
         margin: 0 auto;
         background: black;
