@@ -95,14 +95,35 @@
         text-align: center;
     }
     &__link{
+        position: relative;
         display: block;
         margin: 0 auto;
-        padding: 13px 34px 20px;
-        border: 1px solid #47474F;
+        padding: 13px 34px 20px 34px;
+        border-top: 1px solid #47474F;
         max-width: 159px;
         margin-bottom: 61px;
         color: #47474F;
         border-bottom: 2px solid #47474F;
+    }
+    &__link::after{
+        content: '';
+        display: block;
+        position: absolute;
+        border-left: 1px solid  #47474F; 
+        width: 1px; 
+        height: 56px; 
+        top: 0;
+        right: 100%;
+    }
+    &__link::before{
+        content: '';
+        display: block;
+        position: absolute;
+        border-right: 1px solid  #47474F; 
+        width: 1px; 
+        height: 56px; 
+        top: 0;
+        left: 100%;
     }
 }
 .brands{
@@ -298,6 +319,9 @@
     padding-bottom: 28px;
 }
 }
+button{
+    border: none;
+}
 .footer{
     background-color: black;
     &__form{
@@ -318,6 +342,7 @@
         padding: 18px 0 17px 31px;
         background: rgba(255, 255, 255, 0.18);
         border: none;
+        color: #ffffff;
     }
     &__input-email{
         padding: 18px 0 17px 31px;
@@ -328,6 +353,7 @@
         line-height: 22px;
         border: none;
         background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
     }
     &__textarea{
         padding: 18px 0 17px 31px;
@@ -339,19 +365,43 @@
         border: none;
         background: rgba(255, 255, 255, 0.2);
         height: 127px;
-        color: #F5F5F5;
+        color: #ffffff;
     }
     &__button{
+        font-family: 'Vollkorn';
+        font-style: italic;
+        font-weight: 400;
         display: block;
         margin: 0 auto;
         background: black;
-        border: 1px solid #7EC4BD;
+        border-top: 1px solid #7EC4BD;
         color: #7EC4BD;
         padding: 15px 60px;
         margin-top: 92px;
         margin-bottom: 37px;
         border-bottom: 2px solid #7EC4BD;
         cursor: pointer;
+        position: relative;
+    }
+    &__button::after{
+        content: '';
+        display: block;
+        position: absolute;
+        border-left: 1px solid  #7EC4BD; 
+        width: 1px; 
+        height: 52px; 
+        top: 0;
+        right: 100%;
+    }
+    &__button::before{
+        content: '';
+        display: block;
+        position: absolute;
+        border-right: 1px solid  #7EC4BD; 
+        width: 1px; 
+        height: 52px; 
+        top: 0;
+        left: 100%;
     }
     &__logo-img{
         display: block;

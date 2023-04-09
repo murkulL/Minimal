@@ -63,3 +63,9 @@ h4{
 	text-transform: uppercase;
 	color: $default;
 }
+input::placeholder {
+	color: #fff; 
+}
+textarea::placeholder {
+	color: #fff; 
+}
