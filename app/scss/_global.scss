@@ -27,9 +27,19 @@ body {
 	margin: 0 auto;
 	padding: 0 10px;
 }
-h3{
+b{
 	font-family: 'Montserrat';
 	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+h1,h2,h3,h4{
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+h3{
 	font-size: 23px;
 	line-height: 36px;
 	text-align: center;
@@ -46,17 +56,7 @@ h3::after{
         background-color: #00000017;
         margin-top: 28px;    
 }
-.brands{
-	&__list{
-		display: flex;
-		justify-content: space-between;
-		margin-top: 43px;
-		gap: 20px;
-	}
-}
 h4{
-	font-family: 'Montserrat';
-	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
 	text-align: center;
@@ -69,3 +69,6 @@ input::placeholder {
 textarea::placeholder {
 	color: #fff; 
 }
+input,textarea:focus {
+	outline: none;
+  }
