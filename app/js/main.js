@@ -1,59 +1,44 @@
-window.addEventListener('load', addActiveClass);
-window.addEventListener('resize', addActiveClass);
+function crossButton() {
+  const cross = document.querySelector('.header__cross-nav');
+  const menu = document.querySelector('.header__menu-items');
 
-const divRecentWait = document.querySelector('.wait');
-
-const swiper = new Swiper(".swiper", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+  cross.addEventListener('click', function() {
+    menu.classList.toggle('header__menu-items--active');
   });
-
-function addActiveClass() {
-    if (window.innerWidth <= 720) {
-        divRecentWait.classList.remove("wait");
-        divRecentWait.classList.add('swiper swiper-initialized swiper-horizontal swiper-backface-hidden');
-    } else {
-        divRecentWait.classList.remove("swiper swiper-initialized swiper-horizontal swiper-backface-hidden");
-        divRecentWait.classList.add('wait');
-    }
 }
 
-// window.addEventListener('load', addActiveClass);
-// window.addEventListener('resize', addActiveClass);
+let divRecentWait = document.querySelector('.wait');
+let swiper;
 
-// const swiperElement = document.querySelector('.swiper');
+function addActiveClass() {
+  if (window.innerWidth <= 720) {
+    divRecentWait.classList.add('swiper');
+    divRecentWait.classList.remove('wait');
+    if (!swiper) {
+      swiper = new Swiper('.swiper', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+    }
+  } else {
+    divRecentWait.classList.remove('swiper');
+    divRecentWait.classList.add('wait');
+    if (swiper) {
+      swiper.destroy();
+      swiper = null;
+    }
+  }
+}
 
-// const swiper = new Swiper('.swiper', {
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-//   autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: false,
-//   },
-//   loop: true,
-// });
+window.addEventListener('load', function() {
+  addActiveClass();
+  crossButton();
+});
 
-// function addActiveClass() {
-//   const divRecentWait = document.querySelector('.wait');
-//   if (window.innerWidth >= 720) {
-//     divRecentWait.classList.remove("swiper");
-//     swiperElement.classList.add('wait');
-//     swiper.params.loop = false;
-//     swiper.destroy();
-//     swiper.init();
-//   } else {
-//     divRecentWait.classList.remove("wait");
-//     swiperElement.classList.add('swiper');
-//     swiper.params.loop = true;
-//     swiper.destroy();
-//     swiper.init();
-//   }
-// }
-
-
+window.addEventListener('resize', addActiveClass);
