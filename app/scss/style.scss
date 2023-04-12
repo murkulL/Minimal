@@ -412,5 +412,39 @@ button{
         color: rgba(255, 255, 255, 0.4);
     }
 }
+@media (max-width: 720px){
+    .swiper{
+        display: block;
+    }
+    .swiper-wrapper{
+        display: flex;
+    }
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ourteam{
+        padding-bottom: 40px;
+        &__main-title{
+            padding-top: 40px;
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item{
+            padding-bottom: 20px;
+        }
+    }
+    .recent{
 
-
+        &__items--active{
+            display: flex;
+            gap: 0;
+        }
+        &__card{
+            width: 300px; 
+        }
+    }
+}
