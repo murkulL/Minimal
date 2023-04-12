@@ -511,25 +511,27 @@ button{
 }
 @media (max-width: 620px){
     .header{
-        position: relative;
-        &__menu{
-            padding: 0;
+        &__nav{
+            margin: -50px;
+            height: 180px;
         }
         &__menu-items{
-            display: block;
+            
             overflow: hidden;
             transform: translateY(-200%);
             transition: .3s;
         }
         &__cross-nav{
-            display: block;
+            display: inline-block;
             cursor: pointer;
             position: absolute;
             z-index: 100;
-            top: 25px;
+            top: 35px;
             right: -5px;
         }
-        
+        &__menu-item{
+            padding-top: 150px;
+        }
         &__menu-items--active{
             display: block;
             position: absolute;
@@ -546,16 +548,17 @@ button{
             transition: .3s;
         }
         &__menu-link{
-            position: relative;
+            font-size: 35px;
+            padding: 25px 0;
         }
         &__logo{
             position: absolute;
             z-index: 100;
-            top: 10px;
-            left: 5px;
-        }
-        &__menu-item{
-            
+            top: 20px;
+            left: 10px;
         }
     }
+}
+.making{
+    
 }
