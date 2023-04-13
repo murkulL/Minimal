@@ -12,7 +12,6 @@ let reviewSwiper;
 
 function initSwipers() {
   if (window.innerWidth <= 720) {
-    // инициализация swiper для отзывов
     if (!reviewSwiper) {
       reviewSwiper = new Swiper('.reviews-swiper', {
         pagination: {
@@ -25,7 +24,6 @@ function initSwipers() {
         loop: true,
       });
     }
-    // инициализация swiper для недавних продуктов
     if (!recentSwiper) {
       recentSwiper = new Swiper('.recent-swiper', {
         pagination: {
@@ -39,7 +37,6 @@ function initSwipers() {
       });
     }
   } else {
-    // уничтожение swiper при ширине экрана более 720px
     if (reviewSwiper) {
       reviewSwiper.destroy();
       reviewSwiper = null;
