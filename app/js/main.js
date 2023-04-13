@@ -34,6 +34,12 @@ function initSwipers() {
           disableOnInteraction: true,
         },
         loop: true,
+        // breakpoints: {
+        //   720: {
+        //     slidesPerView: 1,
+        //     spaceBetween: 10,
+        //   },
+        // }
       });
     }
   } else {

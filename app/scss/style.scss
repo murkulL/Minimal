@@ -429,6 +429,7 @@ button{
 }
 .swiper-slide {
     flex-shrink: 1;
+    overflow: hidden; 
 }
 @media (max-width: 970px){
     .minimalist{
@@ -451,7 +452,7 @@ button{
         align-items: center; 
         flex-direction: column;
         flex-shrink: 0;
-
+        overflow: hidden; 
     }
     .swiper-horizontal>.swiper-pagination-bullets
     {
