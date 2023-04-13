@@ -43,7 +43,6 @@
         margin-right: 25px;
         width: 35px;
         height: 35px;
-
     }
 }
 .making{
@@ -161,7 +160,6 @@
     &__items{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
         gap: 20px;
     }
     &__main-title{
@@ -179,6 +177,9 @@
     &__card{
         background: #FFFFFF;
     }
+}
+.swiper-pagination{
+    display: none;
 }
 .ourteam{
     padding-bottom: 89px;
@@ -238,6 +239,7 @@
         line-height: 33px;
         max-width: 339px;
         padding-bottom: 24px;
+        margin: 0 auto;
     }
     &__item-img{
         margin: 0 auto;
@@ -419,22 +421,31 @@ button{
         color: rgba(255, 255, 255, 0.4);
     }
 }
+.swiper-slide {
+    flex-shrink: 1;
+}
+@media (max-width: 970px){
+    .minimalist{
+        &__text{
+            padding: 60px 20px 40px;
+        }
+    }
+}
 @media (max-width: 720px){
+    .swiper-pagination{
+        display: block;
+    }
     .swiper{
         overflow: hidden; 
-
     }
 
-    .swiper-wrapper{
-        display: flex;
-        
-
-    }
     .swiper-slide{
         display: flex;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center; 
+        flex-direction: column;
+        flex-shrink: 0;
+
     }
     .swiper-horizontal>.swiper-pagination-bullets
     {
@@ -464,13 +475,18 @@ button{
         }
     }
     .recent{
-    
         &__items{
+            display: flex;
             gap: 0;
+        }
+        &__inner {
+            padding-bottom: 60px;
+        }
+        &__image {
+            padding-top: 50px;
         }
     }
     .brands{
-        
         padding-bottom: 10px;
         position: relative;
         &__title{
@@ -500,16 +516,25 @@ button{
             text-align: center;
             justify-content: center;
         }
-}
-}
-@media (max-width: 720px){
+    }
     .reviews{
+        padding-bottom: 60px;
         &__text{
             font-size: 20px;
+        }
+        &__items{
+            display: -webkit-box;
+        }
+        &__border{
+            display: none;
         }
     }
     .info{
         background-position-x: center;
+        padding-bottom: 45px;
+        &__title{
+            padding-bottom: 45px;
+        }
         &__list{
             display: grid;
             grid-template-columns: repeat(1,1fr);
@@ -523,7 +548,6 @@ button{
     .footer__form {
         max-width: 550px;
     }
-
 @media (max-width: 620px){
     .header{
         &__nav{
@@ -572,7 +596,6 @@ button{
             top: 20px;
             left: 10px;
         }
-
     }
     .footer__form {
         max-width: 400px;
@@ -585,10 +608,16 @@ button{
         &__title {
             font-size: 25px;
         }
-
     }
-    .footer__form {
-        max-width: 300px;
+    .footer{
+        &__form {
+            max-width: 300px;
 
-    }
+        }
+        &__copy{
+            max-width: 261px;
+            text-align: center;
+            margin: 0 auto;
+        }
+}
 }
