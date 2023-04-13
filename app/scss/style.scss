@@ -6,11 +6,11 @@
 
 
 .header{
-    height: 106px;
     &__menu{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 18px 0;
     }
     &__box-logo{
         display: flex;
@@ -38,6 +38,12 @@
         text-transform: uppercase;
         color: #404040;
     }
+    &__cross-nav{
+        display: none;
+        margin-right: 25px;
+        width: 35px;
+        height: 35px;
+    }
 }
 .making{
     background-image: url(../images/upper-bg.jpg);
@@ -50,9 +56,6 @@
     &__title{
         text-align: center;
         padding-top: 98px;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
         font-size: 44px;
         line-height: 55px;
         text-transform: uppercase;
@@ -71,8 +74,6 @@
       &__text{
         color: rgba(255, 255, 255, 0.81);
         text-align: center;
-        font-family: 'Vollkorn';
-        font-weight: 400;
         font-size: 15px;
         line-height: 20px;
         padding-top: 25px;
@@ -85,14 +86,15 @@
       } 
 }
 .minimalist{
-    height: 289px;
-    margin-bottom: 79px;
+    padding-bottom: 61px;
     background-color: #FEFEC9;
     &__text{
         padding-top: 60px;
         max-width: 940px;
         padding-bottom: 40px;
         text-align: center;
+        font-size: 18px;
+        line-height: 25px;
     }
     &__link{
         position: relative;
@@ -101,7 +103,6 @@
         padding: 13px 34px 20px 34px;
         border-top: 1px solid #47474F;
         max-width: 159px;
-        margin-bottom: 61px;
         color: #47474F;
         border-bottom: 2px solid #47474F;
     }
@@ -127,19 +128,28 @@
     }
 }
 .brands{
-    height: 625px;
+    padding-bottom: 69px;
+    &__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 43px;
+    gap: 20px;
+    }
     &__items{
         gap: 20px;
     }
     &__title{
-        padding-top: 38px;
+        padding-top: 79px;
+    }
+    &__min-title{
+        padding-top: 39px;
     }
     &__text{
         padding-top: 20px;
         text-align: center;
     }
     &__img{
-        max-width: 300px;
+       max-width: 100%;
     }
 }
 .recent{
@@ -150,7 +160,6 @@
     &__items{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
         gap: 20px;
     }
     &__main-title{
@@ -168,6 +177,9 @@
     &__card{
         background: #FFFFFF;
     }
+}
+.swiper-pagination{
+    display: none;
 }
 .ourteam{
     padding-bottom: 89px;
@@ -192,8 +204,6 @@
     }
     &__title{
         padding-top: 20px;
-        font-family: 'Montserrat';
-        font-weight: 400;
         font-size: 16px;
         line-height: 20px;
         text-align: center;
@@ -202,10 +212,12 @@
     }
     &__text{
         padding-bottom: 18px;
-        font-family: 'Vollkorn';
-        font-weight: 400;
         font-size: 14px;
         line-height: 20px;
+    }
+    &__link{
+        background: #F5F5F5;
+        padding: 0 8px;
     }
 }
 .reviews{
@@ -223,12 +235,11 @@
     }
     &__text{
         text-align: center;
-        font-family: 'Vollkorn';
-        font-weight: 400;
         font-size: 26px;
         line-height: 33px;
         max-width: 339px;
         padding-bottom: 24px;
+        margin: 0 auto;
     }
     &__item-img{
         margin: 0 auto;
@@ -255,8 +266,6 @@
     &__text-name{
         text-align: center;
         color: #ABABAB;
-        font-family: 'Montserrat';
-        font-weight: 400;
         font-size: 14px;
         line-height: 20px;
         text-transform: uppercase;
@@ -276,41 +285,45 @@
     }
     &__list{
         display: flex;
-        gap: 196px;
-        align-self: center;
+        justify-content: space-between;
     }
     &__list-items{
         text-align: center;
+        width: 300px;
     }
     &__image{
         margin: 0 auto;
-        
-    }
-    &__social-items{
-        justify-items: start;
-        margin-left: 45px;
-        padding-bottom: 11px;
     }
     &__social-items{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         position: relative;
+        justify-items: start;
+        padding-bottom: 11px;
     }
     &__image-facebook,
     &__image-twitter,
     &__image-linkdin{
         position: absolute;
         top: 2px;
-        right: 109px;
+        left: -24px;
     }
     &__block-text{
         padding-top: 21px;
     }
     &__item-meet{
         max-width: 178px;
+        margin: 0 auto;
+    }
+    &__social-list{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        width: 56px;
     }
 #local-img{
-    padding-bottom: 21px;
+    padding-bottom: 18px;
 }
 #email-img{
     padding-bottom: 34px;
@@ -334,9 +347,7 @@ button{
     }
     &__input-text,
     &__input-number{
-        font-family: 'Vollkorn';
         font-style: italic;
-        font-weight: 400;
         font-size: 17px;
         line-height: 22px;
         padding: 18px 0 17px 31px;
@@ -346,9 +357,7 @@ button{
     }
     &__input-email{
         padding: 18px 0 17px 31px;
-        font-family: 'Vollkorn';
         font-style: italic;
-        font-weight: 400;
         font-size: 17px;
         line-height: 22px;
         border: none;
@@ -356,10 +365,8 @@ button{
         color: #ffffff;
     }
     &__textarea{
-        padding: 18px 0 17px 31px;
-        font-family: 'Vollkorn';
+        padding: 18px 31px 18px 31px;
         font-style: italic;
-        font-weight: 400;
         font-size: 17px;
         line-height: 22px;
         border: none;
@@ -368,9 +375,7 @@ button{
         color: #ffffff;
     }
     &__button{
-        font-family: 'Vollkorn';
         font-style: italic;
-        font-weight: 400;
         display: block;
         margin: 0 auto;
         background: black;
@@ -411,12 +416,208 @@ button{
     &__copy{
         text-align: center;
         padding-bottom: 75px;
-        font-family: 'Vollkorn';
-        font-weight: 400;
         font-size: 15px;
         line-height: 22px;
         color: rgba(255, 255, 255, 0.4);
     }
 }
+.swiper-slide {
+    flex-shrink: 1;
+}
+@media (max-width: 970px){
+    .minimalist{
+        &__text{
+            padding: 60px 20px 40px;
+        }
+    }
+}
+@media (max-width: 720px){
+    .swiper-pagination{
+        display: block;
+    }
+    .swiper{
+        overflow: hidden; 
+    }
 
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        flex-shrink: 0;
 
+    }
+    .swiper-horizontal>.swiper-pagination-bullets
+    {
+        bottom: -35px;
+        position: relative;
+    }
+    .swiper-horizontal{
+        padding-bottom: 30px;
+    }
+    .making{
+        &__title{
+            font-size: 30px;
+        }
+    }
+    .ourteam{
+        padding-bottom: 40px;
+        &__main-title{
+            padding-top: 40px;
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+           
+        }
+        &__item{
+            padding-bottom: 20px;
+        }
+    }
+    .recent{
+        &__items{
+            display: flex;
+            gap: 0;
+        }
+        &__inner {
+            padding-bottom: 60px;
+        }
+        &__image {
+            padding-top: 50px;
+        }
+    }
+    .brands{
+        padding-bottom: 10px;
+        position: relative;
+        &__title{
+            padding-bottom: 60px;
+        }
+        &__list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        }
+        &__img{
+            margin: 0 auto;
+            max-width: 200px;
+        }
+        &__text{
+            max-width: 360px;
+            margin: 0 auto;
+            padding: 0;
+            transform: translate(0%, -33%);
+            padding-bottom: 52px;
+        }
+        &__min-title{
+            display: flex;
+            position: relative;
+            left: 50%;
+            top: -55%;
+            transform: translate(-50%,-100%,);
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    .reviews{
+        padding-bottom: 60px;
+        &__text{
+            font-size: 20px;
+        }
+        &__items{
+            display: -webkit-box;
+        }
+        &__border{
+            display: none;
+        }
+    }
+    .info{
+        background-position-x: center;
+        padding-bottom: 45px;
+        &__title{
+            padding-bottom: 45px;
+        }
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            margin: 0 auto;
+            max-width: 300px;
+        }
+        &__list-items{
+            padding-bottom: 50px;
+        }
+    }
+    .footer__form {
+        max-width: 550px;
+    }
+@media (max-width: 620px){
+    .header{
+        &__nav{
+            margin: -50px;
+            height: 180px;
+        }
+        &__menu-items{
+            
+            overflow: hidden;
+            transform: translateY(-200%);
+            transition: .3s;
+        }
+        &__cross-nav{
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            z-index: 100;
+            top: 35px;
+            right: -5px;
+        }
+        &__menu-item{
+            padding-top: 150px;
+        }
+        &__menu-items--active{
+            display: block;
+            position: absolute;
+            z-index: 99;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: 0;
+            background-color: #FEFEC9;
+            margin: 0 ;
+            padding: 0;
+            height: 100vh;
+            transform: translateY(0);
+            transition: .3s;
+        }
+        &__menu-link{
+            font-size: 35px;
+            padding: 25px 0;
+        }
+        &__logo{
+            position: absolute;
+            z-index: 100;
+            top: 20px;
+            left: 10px;
+        }
+    }
+    .footer__form {
+        max-width: 400px;
+
+    }
+}
+}
+@media (max-width: 470px){
+    .making{
+        &__title {
+            font-size: 25px;
+        }
+    }
+    .footer{
+        &__form {
+            max-width: 300px;
+
+        }
+        &__copy{
+            max-width: 261px;
+            text-align: center;
+            margin: 0 auto;
+        }
+}
+}
