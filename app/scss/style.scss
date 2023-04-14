@@ -43,7 +43,7 @@
     &__menu-link:hover{
         color: #89ccc5;
     }
-    &__cross-nav{
+    &__burger{
         display: none;
         margin-right: 25px;
         width: 35px;
@@ -586,7 +586,7 @@ button{
             transform: translateY(-200%);
             transition: .3s;
         }
-        &__cross-nav{
+        &__burger{
             display: inline-block;
             cursor: pointer;
             position: absolute;
@@ -595,7 +595,7 @@ button{
             right: -5px;
 
         }
-        &__cross-nav svg{
+        &__burger svg{
             width: 100px;
         }
         &__menu-item{

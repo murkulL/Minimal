@@ -1,8 +1,8 @@
-function crossButton() {
-  const cross = document.querySelector('.header__cross-nav');
+function burgerButton() {
+  const burger = document.querySelector('.header__burger');
   const menu = document.querySelector('.header__menu-items');
 
-  cross.addEventListener('click', function() {
+  burger.addEventListener('click', function() {
     menu.classList.toggle('header__menu-items--active');
   });
 }
@@ -55,7 +55,7 @@ function initSwipers() {
 }
 
 window.addEventListener('load', function() {
-  crossButton();
+  burgerButton();
   initSwipers();
 });
 
