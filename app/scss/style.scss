@@ -38,6 +38,10 @@
         line-height: 20px;
         text-transform: uppercase;
         color: #404040;
+        transition: transform 0.3s ease-out;
+    }
+    &__menu-link:hover{
+        color: #89ccc5;
     }
     &__cross-nav{
         display: none;
@@ -109,6 +113,10 @@
         max-width: 159px;
         color: #47474F;
         border-bottom: 2px solid #47474F;
+    }
+    &__link:hover{
+        background: #adadb1;
+        color:#f1f1a1;
     }
     &__link::after{
         content: '';
@@ -404,6 +412,12 @@ button{
         cursor: pointer;
         position: relative;
     }
+    &__button:hover{
+        background: #7EC4BD;
+        color: #000;
+        
+
+    }
     &__button::after{
         content: '';
         display: block;
@@ -579,9 +593,13 @@ button{
             z-index: 100;
             top: 35px;
             right: -5px;
+
+        }
+        &__cross-nav svg{
+            width: 100px;
         }
         &__menu-item{
-            padding-top: 150px;
+            padding-top: 130px;
         }
         &__menu-items--active{
             display: block;
@@ -599,7 +617,7 @@ button{
             transition: .3s;
         }
         &__menu-link{
-            font-size: 35px;
+            font-size: 27px;
             padding: 25px 0;
         }
         &__logo{
