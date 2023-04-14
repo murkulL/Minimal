@@ -11,6 +11,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 18px 0;
+        position: relative;
     }
     &__box-logo{
         display: flex;
@@ -133,13 +134,25 @@
 .brands{
     padding-bottom: 69px;
     &__list{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: center;
     margin-top: 43px;
     gap: 20px;
+    flex-wrap: wrap;
+
     }
-    &__items{
+    &__item{
         gap: 20px;
+        max-width: 300px;
+        width: 100%;
+        flex-basis: 31.90%; 
+        flex-grow: 1; 
+        max-width: 300px;
+    }
+    &__item-box{
+        padding: 50px 87px;
+        background: #F5F5F5;
+
     }
     &__title{
         padding-top: 79px;
@@ -150,9 +163,6 @@
     &__text{
         padding-top: 20px;
         text-align: center;
-    }
-    &__img{
-       max-width: 100%;
     }
 }
 .recent{
@@ -349,7 +359,7 @@ button{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         margin: 0 auto;
-        padding-top: 69px;   
+        padding-top: 69px;  
     }
     &__input-text,
     &__input-number{
@@ -426,6 +436,7 @@ button{
         line-height: 22px;
         color: rgba(255, 255, 255, 0.4);
     }
+    
 }
 .swiper-slide {
     flex-shrink: 1;
@@ -445,7 +456,6 @@ button{
     .swiper{
         overflow: hidden; 
     }
-
     .swiper-slide{
         display: flex;
         justify-content: center;
@@ -454,8 +464,7 @@ button{
         flex-shrink: 0;
         overflow: hidden; 
     }
-    .swiper-horizontal>.swiper-pagination-bullets
-    {
+    .swiper-horizontal>.swiper-pagination-bullets{
         bottom: -35px;
         position: relative;
     }
@@ -489,9 +498,6 @@ button{
         &__inner {
             padding-bottom: 60px;
         }
-        &__image {
-            padding-top: 50px;
-        }
     }
     .brands{
         padding-bottom: 10px;
@@ -502,6 +508,7 @@ button{
         &__list{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
         }
         &__img{
             margin: 0 auto;
@@ -518,7 +525,7 @@ button{
             display: flex;
             position: relative;
             left: 50%;
-            top: -55%;
+            top: -60%;
             transform: translate(-50%,-100%,);
             text-align: center;
             justify-content: center;
@@ -552,14 +559,12 @@ button{
             padding-bottom: 50px;
         }
     }
-    .footer__form {
-        max-width: 550px;
-    }
+}
 @media (max-width: 620px){
     .header{
         &__nav{
             margin: -50px;
-            height: 180px;
+            height: 170px;
         }
         &__menu-items{
             
@@ -583,8 +588,8 @@ button{
             position: absolute;
             z-index: 99;
             text-align: center;
-            left: 0;
-            right: 0;
+            left: -25px;
+            right: -25px;
             top: 0;
             background-color: #FEFEC9;
             margin: 0 ;
@@ -602,13 +607,13 @@ button{
             z-index: 100;
             top: 20px;
             left: 10px;
+        } 
+    }
+    .footer{
+        &__form{
+            max-width: 430px;
         }
     }
-    .footer__form {
-        max-width: 400px;
-
-    }
-}
 }
 @media (max-width: 470px){
     .making{
@@ -626,5 +631,7 @@ button{
             text-align: center;
             margin: 0 auto;
         }
+    }
 }
-}
+
+
