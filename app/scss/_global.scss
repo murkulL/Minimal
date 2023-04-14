@@ -4,6 +4,7 @@ body {
 	font-family: 'Vollkorn', serif;
 	font-weight: 400;
 	color: $default;
+	overflow-x: hidden;
 }
 .wrapper {
 	display: flex;
@@ -70,4 +71,12 @@ textarea::placeholder {
 }
 input,textarea:focus {
 	outline: none;
-  }
+}
+textarea{
+    resize: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
