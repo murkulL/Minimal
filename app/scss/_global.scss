@@ -27,6 +27,11 @@ body {
 	margin: 0 auto;
 	padding: 0 10px;
 }
+svg{
+	display: block;
+	transition: all .6s ease-out;
+}
+
 b{
 	font-family: 'Montserrat';
 	font-weight: 400;
