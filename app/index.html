@@ -10,13 +10,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&family=Vollkorn:ital@0;1&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="dist/loading-attribute-polyfill.css" />
+  <script src="dist/loading-attribute-polyfill.umd.js" async></script>
   <title>MINIMAL</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" id="autoscrollup">
       <div class="container">
         <div class="header__menu">
           <div class="header__box-logo">
@@ -37,8 +39,10 @@
                 <a class="header__menu-link" href="#info">contact</a>
               </li>
             </ul>
-            <img class="header__cross-nav" src="/images/cross.svg" alt="nav-img-cross">
           </nav>
+          <div class="burger">
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -70,7 +74,7 @@
             <ul class="brands__list">
               <li class="brands__item">
                 <div class="brands__item-box">
-                <img class="brands__img" src="/images/target.png" width="127" height="119" alt="brands-img">
+                  <img class="brands__img" src="/images/target.png" width="127" height="119" alt="brands-img">
                 </div>
                 <h4 class="brands__min-title">SET a target</h4>
                 <p class="brands__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
@@ -78,7 +82,7 @@
               </li>
               <li class="brands__item">
                 <div class="brands__item-box">
-                <img class="brands__img" src="/images/solution.png" width="127" height="119" alt="brands-img">
+                  <img class="brands__img" src="/images/solution.png" width="127" height="119" alt="brands-img">
                 </div>
                 <h4 class="brands__min-title">design a solution</h4>
                 <p class="brands__text">Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -86,7 +90,7 @@
               </li>
               <li class="brands__item">
                 <div class="brands__item-box">
-                <img class="brands__img" src="/images/progress.png" width="127" height="119" alt="brands-img">
+                  <img class="brands__img" src="/images/progress.png" width="127" height="119" alt="brands-img">
                 </div>
                 <h4 class="brands__min-title">track the progress</h4>
                 <p class="brands__text">Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem
@@ -101,75 +105,83 @@
           <div class="recent__inner">
             <h3 class="recent__main-title">Recent projects</h3>
             <div class="recent-swiper">
-            <ul class="recent__items swiper-wrapper">
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/woods.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/2.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/3.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/4.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/5.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/6.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/7.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/8.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-              <li class="recent__item swiper-slide">
-                <div class="recent__card">
-                  <img class="recent__image" src="/images/9.jpg" alt="recent-img">
-                  <h4 class="recent__title">woods</h4>
-                  <p class="recent__text">Photography</p>
-                </div>
-              </li>
-            </ul>
-            <div class="swiper-pagination"></div>
+              <ul class="recent__items swiper-wrapper">
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/woods.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/2.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/3.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/4.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/5.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/6.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/7.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/8.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+                <li class="recent__item swiper-slide">
+                  <div class="recent__card">
+                    <img class="recent__image" src="/images/9.jpg" alt="recent-img" loading="lazy">
+                    <h4 class="recent__title">woods</h4>
+                    <p class="recent__text">Photography</p>
+                    <div class="recent__texton-img">MINIMAL</div>
+                  </div>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-          
-        </div>
         </div>
       </section>
       <section class="ourteam" id="ourteam">
@@ -178,71 +190,111 @@
             <h3 class="ourteam__main-title">our team</h3>
             <ul class="ourteam__items">
               <li class="ourteam__item">
-                <img class="ourteam__image" src="/images/Ron.png" alt="ourteam-img">
+                <img class="ourteam__image" src="/images/ron-rgba.png" alt="ourteam-img" loading="lazy">
                 <b class="ourteam__title">Ron Swanson</b>
                 <span class="ourteam__text">Founder</span>
                 <div class="ourteam__block-links">
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/insta.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/twitt.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/be.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/basket.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/mail.svg" alt="ourteam-img"></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-twitter" width="14" height="14">
+                      <use href="./svg/sprite.svg#twitt" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-instagram" width="14" height="14">
+                      <use href="./svg/sprite.svg#instagram" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-behance" width="14" height="14">
+                      <use href="./svg/sprite.svg#behance" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-dribbble" width="14" height="14">
+                      <use href="./svg/sprite.svg#dribbble" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-mail" width="14" height="14">
+                      <use href="./svg/sprite.svg#mail" />
+                    </svg></a>
                 </div>
               </li>
               <li class="ourteam__item">
-                <img class="ourteam__image" src="/images/Julia.png" alt="ourteam-img">
+                <img class="ourteam__image" src="/images/julia-rgba.png" alt="ourteam-img" loading="lazy">
                 <b class="ourteam__title">Julia Depish</b>
                 <span class="ourteam__text">Marketing</span>
                 <div class="ourteam__block-links">
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/insta.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/twitt.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/be.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/basket.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/mail.svg" alt="ourteam-img"></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-twitter" width="14" height="14">
+                      <use href="./svg/sprite.svg#twitt" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-instagram" width="14" height="14">
+                      <use href="./svg/sprite.svg#instagram" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-behance" width="14" height="14">
+                      <use href="./svg/sprite.svg#behance" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-dribbble" width="14" height="14">
+                      <use href="./svg/sprite.svg#dribbble" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-mail" width="14" height="14">
+                      <use href="./svg/sprite.svg#mail" />
+                    </svg></a>
                 </div>
               </li>
               <li class="ourteam__item">
-                <img class="ourteam__image" src="/images/Danny.png" alt="ourteam-img">
+                <img class="ourteam__image" src="/images/danny-rgba.png" alt="ourteam-img" loading="lazy">
                 <b class="ourteam__title">Danny Devry</b>
                 <span class="ourteam__text">Designer</span>
                 <div class="ourteam__block-links">
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/insta.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/twitt.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/be.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/basket.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/mail.svg" alt="ourteam-img"></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-twitter" width="14" height="14">
+                      <use href="./svg/sprite.svg#twitt" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-instagram" width="14" height="14">
+                      <use href="./svg/sprite.svg#instagram" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-behance" width="14" height="14">
+                      <use href="./svg/sprite.svg#behance" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-dribbble" width="14" height="14">
+                      <use href="./svg/sprite.svg#dribbble" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-mail" width="14" height="14">
+                      <use href="./svg/sprite.svg#mail" />
+                    </svg></a>
                 </div>
               </li>
               <li class="ourteam__item">
-                <img class="ourteam__image" src="/images/Lisa.png" alt="ourteam-img">
+                <img class="ourteam__image" src="/images/lisa-rgba.png" alt="ourteam-img" loading="lazy">
                 <b class="ourteam__title">Lisa Smith</b>
                 <span class="ourteam__text">Developer</span>
                 <div class="ourteam__block-links">
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/insta.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/twitt.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/be.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/basket.svg" alt="ourteam-img"></a>
-                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><img
-                      class="ourteam-link-img" src="/images/mail.svg" alt="ourteam-img"></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-twitter" width="14" height="14">
+                      <use href="./svg/sprite.svg#twitt" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-instagram" width="14" height="14">
+                      <use href="./svg/sprite.svg#instagram" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-behance" width="14" height="14">
+                      <use href="./svg/sprite.svg#behance" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-dribbble" width="14" height="14">
+                      <use href="./svg/sprite.svg#dribbble" />
+                    </svg></a>
+                  <a class="ourteam__link" href="https://www.instagram.com" target="_blank" rel="noopener"><svg
+                      class="ourteam__icon-mail" width="14" height="14">
+                      <use href="./svg/sprite.svg#mail" />
+                    </svg></a>
                 </div>
               </li>
             </ul>
@@ -258,21 +310,21 @@
               <div class="reviews__border"></div>
             </div>
             <div class="reviews-swiper">
-            <ul class="reviews__items swiper-wrapper">
-              <li class="reviews__item swiper-slide">
-                <p class="reviews__text">“I love these guys! They did a great job. I would recommend them to anyone.”
-                </p>
-                <img class="reviews__item-img" src="/images/user1.1.jpg" alt="review-img">
-                <p class="reviews__text-name">Julius Von Uberstien</p>
-              </li>
-              <li class="reviews__item swiper-slide">
-                <p class="reviews__text">“Elexis Corp. has grown immensely with the help of Minimal.”</p>
-                <img class="reviews__item-img" src="/images/user1.2.jpg" alt="review-img">
-                <p class="reviews__text-name">Rachel Stamos</p>
-              </li>
-            </ul>
+              <ul class="reviews__items swiper-wrapper">
+                <li class="reviews__item swiper-slide">
+                  <p class="reviews__text">“I love these guys! They did a great job. I would recommend them to anyone.”
+                  </p>
+                  <img class="reviews__item-img" src="/images/user1.1.jpg" alt="review-img">
+                  <p class="reviews__text-name">Julius Von Uberstien</p>
+                </li>
+                <li class="reviews__item swiper-slide">
+                  <p class="reviews__text">“Elexis Corp. has grown immensely with the help of Minimal.”</p>
+                  <img class="reviews__item-img" src="/images/user1.2.jpg" alt="review-img">
+                  <p class="reviews__text-name">Rachel Stamos</p>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
         </div>
       </section>
       <section class="info" id="info">
@@ -338,11 +390,13 @@
         <textarea class="footer__textarea" name="textarea" placeholder="Describe youre project..."></textarea>
       </form>
       <button class="footer__button" type="submit">Send Message</button>
-      <img class="footer__logo-img" src="/images/footer-logo.svg" alt="footer-logo">
+      <a href="#autoscrollup" class="footer__link-autoscrollup"><img class="footer__logo-img"
+          src="/images/footer-logo.svg" alt="footer-logo"></a>
       <p class="footer__copy">Minimal Template made in Webflow. All rights reserved.</p>
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="jquery-3.6.4.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
