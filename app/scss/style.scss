@@ -51,7 +51,6 @@
         color: #89ccc5;
         transition : 0.5s;
     }
-
 }
 .making{
     background-image: url(../images/upper-bg.jpg);
@@ -180,7 +179,6 @@
     &__item-box:hover{
         background-image: linear-gradient(to top ,#f1f1a1, #89ccc5);
         transform: rotate(-5deg) translate(0, -5%);
-
     }
 }
 .recent{
@@ -318,7 +316,6 @@
         padding: 0 1px;
         transition: .2s ease-in;
         transform: scale(1.8);
-
     }
     &__icon-dribbble:hover{
         color:#81004e;
@@ -418,7 +415,6 @@
     &__image:hover{
         transform: rotate(-15deg) translate(0, -20%);
         stroke:#81004e;
-
     }
     &__social-items{
         display: grid;
@@ -674,11 +670,6 @@ button{
         &__main-title{
             padding-top: 40px;
         }
-        &__items{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-           
-        }
         &__item{
             padding-bottom: 20px;
         }
@@ -751,6 +742,15 @@ button{
         }
         &__list-items{
             padding-bottom: 50px;
+        }
+    }
+}
+@media (max-width: 800px){
+    .ourteam{
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+           
         }
     }
 }
