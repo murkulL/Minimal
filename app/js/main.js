@@ -23,7 +23,7 @@ let recentSwiper;
 let reviewSwiper;
 
 function initSwipers() {
-  if (window.innerWidth <= 720) {
+  if (window.innerWidth <= 820) {
     if (!reviewSwiper) {
       reviewSwiper = new Swiper('.reviews-swiper', {
         pagination: {

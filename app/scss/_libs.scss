@@ -1,6 +1,11 @@
 
 .burger{
     display: flex;
+    cursor: pointer;
+    overflow: visible;
+}
+.burger{
+    display: flex;
     position: absolute;
     z-index: 888;
     align-items: center;
@@ -40,7 +45,4 @@
 .burger--active::after{
     bottom: 45%;
     transform: rotate(45deg) ;
-}
-.burger{
-    display: none;
 }
